@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* This ensures the actual HTML and Body tags take up 100% of the screen */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents unwanted scrollbars */
+}
