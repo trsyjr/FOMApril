@@ -10,7 +10,7 @@ import tahoeImg from '../assets/tahoe.png';
 import oldImg from '../assets/Old.png'; 
 import lv1 from '../assets/Lv1.png';
 import lv2 from '../assets/Lv2.png';
-import lv3 from '../assets/Lv3.png';
+import lv3 from '../assets/lv3.png';
 import SU1 from '../assets/Su1.png';
 import SU2 from '../assets/Su2.png';
 import SU3 from '../assets/Su3.png';
