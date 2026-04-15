@@ -30,7 +30,10 @@ function App() {
       <div className="relative z-10 flex flex-col items-center gap-8">
         <div className="text-center">
           <h1 className="text-white text-5xl md:text-6xl font-black tracking-tighter uppercase italic pt-20 px-10">
-            Feature <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-300">of the Month</span>
+            Feature 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-300 pr-4">
+              {" "}of the Month
+            </span>
           </h1>
           <div className="h-1 w-32 bg-purple-600 mx-auto mt-4 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)]"></div>
         </div>

@@ -11,7 +11,23 @@ import oldImg from '../assets/Old.png';
 import lv1 from '../assets/Lv1.png';
 import lv2 from '../assets/Lv2.png';
 import lv3 from '../assets/Lv3.png';
-
+import SU1 from '../assets/Su1.png';
+import SU2 from '../assets/Su2.png';
+import SU3 from '../assets/Su3.png';
+import La1 from '../assets/La1.png';
+import La2 from '../assets/La2.png';
+import La3 from '../assets/La3.png';
+import HK from '../assets/HK.png';
+import K1 from '../assets/K1.png';
+import K2 from '../assets/K2.png';
+import P1 from '../assets/P1.png';
+import P2 from '../assets/P2.png';
+import P3 from '../assets/P3.png';
+import P4 from '../assets/P4.png';
+import P5 from '../assets/P5.png';
+import P6 from '../assets/P6.png';
+import P7 from '../assets/P7.png';
+import P8 from '../assets/P8.png';
 const TravelCard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
@@ -78,20 +94,26 @@ const TravelCard = () => {
       img: tahoeImg 
     },
     ...createAdaptivePages("Old Nile, SF", 1, "🌉", [oldImg]),
-    ...createAdaptivePages("Las Vegas", 2, "🎰", [lv1, lv2, lv3]),
-    ...createAdaptivePages("Singapore", 1, "🦁"),
-    ...createAdaptivePages("Stanford University", 3, "🎓"),
-    ...createAdaptivePages("Los Angeles", 2, "🎬"),
-    ...createAdaptivePages("Macau", 1, "🇲🇴"),
-    ...createAdaptivePages("Hong Kong", 1, "🏙️"),
-    ...createAdaptivePages("Korea", 2, "🇰🇷"),
-    ...createAdaptivePages("Philippines", 8, "🇵🇭"),
+    ...createAdaptivePages("Las Vegas", 2, "🎰", [lv1, lv2]),
+    ...createAdaptivePages("Singapore", 1, "🦁", [lv3]),
+    ...createAdaptivePages("Stanford University", 3, "🎓", [SU1, SU2, SU3]),
+    ...createAdaptivePages("Los Angeles", 2, "🎬", [La1, La2]),
+    ...createAdaptivePages("Macau", 1, "🇲🇴", [La3]),
+    ...createAdaptivePages("Hong Kong", 1, "🏙️", [HK]),
+    ...createAdaptivePages("Korea", 2, "🇰🇷", [K1, K2]),
+    ...createAdaptivePages("Philippines", 8, "🇵🇭", [P1, P2, P3, P4, P5, P6, P7, P8]),
     {
       type: "quote",
-      title: "FINAL THOUGHTS",
+      title: "Favorite Quotes",
       quotes: [
-        "Age is just a number. Keep on dreaming.",
-        "To travel is to live."
+        "Sometimes, you have to stop thinking so much and just go where your hearts takes you.",
+      ]
+    },
+    {
+      type: "quote2",
+      title: "Favortie Quotes",
+      quotes: [
+        "Make everything as simple as possible, but not simpler.",
       ]
     }
   ];
@@ -223,6 +245,14 @@ const TravelCard = () => {
               )}
 
               {pages[currentPage].type === "quote" && (
+                <div className="space-y-10 text-center">
+                  {pages[currentPage].quotes.map((q, i) => (
+                    <p key={i} className="text-sm sm:text-xl font-serif italic text-zinc-700 leading-snug">"{q}"</p>
+                  ))}
+                </div>
+              )}
+
+              {pages[currentPage].type === "quote2" && (
                 <div className="space-y-10 text-center">
                   {pages[currentPage].quotes.map((q, i) => (
                     <p key={i} className="text-sm sm:text-xl font-serif italic text-zinc-700 leading-snug">"{q}"</p>
